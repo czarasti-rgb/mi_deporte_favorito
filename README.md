@@ -1,17 +1,42 @@
-# mi_deporte_favorito
+# Mi Deporte Favorito - Flutter
 
-A new Flutter project.
+## Actividad Integradora 1
+**Materia:** Programación IV  
+**Estudiante:** Carlos Alberto Zarasti Montecé  
 
-## Getting Started
+## Descripción
 
-This project is a starting point for a Flutter application.
+Esta aplicación fue desarrollada en Flutter como parte de la Actividad Integradora 1 de Programación IV.
 
-A few resources to get you started if this is your first Flutter project:
+El tema seleccionado es **Mi Deporte Favorito: Fútbol Sala**.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+La aplicación presenta información básica sobre este deporte, utilizando widgets de Flutter, colores personalizados, íconos, tarjetas, filas, columnas y un botón interactivo.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Funcionalidades
+
+- Pantalla principal creada con `MaterialApp`.
+- Uso de `Scaffold`.
+- Barra superior con `AppBar`.
+- Textos informativos.
+- Ícono relacionado con fútbol sala.
+- Uso de `Column`.
+- Uso de `Row`.
+- Uso de `Container`.
+- Uso de `Card`.
+- Colores personalizados.
+- Botón interactivo.
+- Opción para mostrar y ocultar información adicional.
+- Mensaje mediante `SnackBar`.
+
+## Paquete externo utilizado
+
+Se instaló y utilizó el paquete:
+
+`google_fonts`
+
+Este paquete permite utilizar tipografías de Google Fonts dentro de la aplicación.
+
+Comando utilizado:
+
+```bash
+flutter pub add google_fonts
