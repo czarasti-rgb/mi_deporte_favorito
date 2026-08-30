@@ -1,42 +1,62 @@
-# Mi Deporte Favorito - Flutter
+# Mi Deporte Favorito - Fútbol Sala
 
-## Actividad Integradora 1
-**Materia:** Programación IV  
-**Estudiante:** Carlos Alberto Zarasti Montecé  
+Aplicación móvil desarrollada en Flutter como parte de la Actividad Integradora 2 de la materia Programación IV.
+
+## Estudiante
+
+Carlos Alberto Zarasti Montecé
+
+## Universidad
+
+ECOTEC
+
+## Materia
+
+Programación IV
+
+## Actividad
+
+Actividad Integradora 2
 
 ## Descripción
 
-Esta aplicación fue desarrollada en Flutter como parte de la Actividad Integradora 1 de Programación IV.
+La aplicación presenta información relacionada con mi deporte favorito: el fútbol sala. El proyecto fue desarrollado utilizando Flutter y Dart.
 
-El tema seleccionado es **Mi Deporte Favorito: Fútbol Sala**.
-
-La aplicación presenta información básica sobre este deporte, utilizando widgets de Flutter, colores personalizados, íconos, tarjetas, filas, columnas y un botón interactivo.
+Esta versión incorpora diferentes pantallas, navegación entre secciones y elementos interactivos.
 
 ## Funcionalidades
 
-- Pantalla principal creada con `MaterialApp`.
-- Uso de `Scaffold`.
-- Barra superior con `AppBar`.
-- Textos informativos.
-- Ícono relacionado con fútbol sala.
-- Uso de `Column`.
-- Uso de `Row`.
-- Uso de `Container`.
-- Uso de `Card`.
-- Colores personalizados.
-- Botón interactivo.
-- Opción para mostrar y ocultar información adicional.
-- Mensaje mediante `SnackBar`.
+- Pantalla principal de la aplicación.
+- Navegación entre diferentes pantallas.
+- Sección de equipos.
+- Selección de equipos mediante interacción con el usuario.
+- Mensajes utilizando SnackBar.
+- Pantalla de favoritos.
+- Interacción mediante botón de favorito.
+- Uso de AlertDialog.
+- Pantalla Acerca de.
+- Diseño mediante widgets de Flutter.
+- Uso de iconos y colores personalizados.
 
-## Paquete externo utilizado
+## Tecnologías utilizadas
 
-Se instaló y utilizó el paquete:
+- Flutter
+- Dart
+- Material Design
+- Google Fonts
 
-`google_fonts`
+## Estructura principal
 
-Este paquete permite utilizar tipografías de Google Fonts dentro de la aplicación.
+El proyecto contiene diferentes pantallas organizadas dentro de la carpeta `lib/screens`, permitiendo mantener el código organizado y facilitar la navegación de la aplicación.
 
-Comando utilizado:
+## Evidencias
 
-```bash
-flutter pub add google_fonts
+En la carpeta `capturas` se encuentran las evidencias del funcionamiento de la aplicación y de las diferentes interacciones realizadas durante su ejecución.
+
+## Ejecución
+
+Para ejecutar el proyecto se utiliza:
+
+flutter pub get
+
+flutter run
