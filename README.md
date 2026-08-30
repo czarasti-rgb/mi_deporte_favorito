@@ -72,3 +72,7 @@ Se realizaron capturas de las principales funcionalidades de la aplicación:
 - Interacción con favoritos.
 - Pantalla Acerca de.
 - Ventanas de diálogo y mensajes de interacción.
+
+## Navegación de la aplicación
+
+La aplicación utiliza diferentes pantallas para organizar su contenido. Desde la pantalla principal el usuario puede acceder a la sección de equipos, favoritos y acerca de. También se implementaron elementos interactivos como botones, SnackBar y AlertDialog para mejorar la experiencia del usuario.
