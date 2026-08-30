@@ -76,3 +76,7 @@ Se realizaron capturas de las principales funcionalidades de la aplicación:
 ## Navegación de la aplicación
 
 La aplicación utiliza diferentes pantallas para organizar su contenido. Desde la pantalla principal el usuario puede acceder a la sección de equipos, favoritos y acerca de. También se implementaron elementos interactivos como botones, SnackBar y AlertDialog para mejorar la experiencia del usuario.
+
+## Conclusión
+
+El desarrollo de esta aplicación permitió aplicar conceptos fundamentales de Flutter, como navegación entre pantallas, organización mediante widgets, manejo de interacciones y uso de componentes de Material Design. La aplicación fue probada mediante un emulador Android para verificar el funcionamiento de sus diferentes opciones.
