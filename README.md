@@ -60,3 +60,15 @@ Para ejecutar el proyecto se utiliza:
 flutter pub get
 
 flutter run
+
+## Capturas de funcionamiento
+
+Se realizaron capturas de las principales funcionalidades de la aplicación:
+
+- Pantalla principal.
+- Navegación hacia la sección de equipos.
+- Selección de equipos.
+- Pantalla de favoritos.
+- Interacción con favoritos.
+- Pantalla Acerca de.
+- Ventanas de diálogo y mensajes de interacción.
