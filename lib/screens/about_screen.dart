@@ -1,7 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutScreen extends StatelessWidget {
   const AboutScreen({super.key});
+
+  Future<void> _abrirFlutter(BuildContext context) async {
+    final Uri url = Uri.parse('https://flutter.dev');
+
+    if (!await launchUrl(
+      url,
+      mode: LaunchMode.externalApplication,
+    )) {
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('No se pudo abrir el enlace'),
+          ),
+        );
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -115,7 +133,7 @@ class AboutScreen extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 25),
+              const SizedBox(height: 20),
 
               ElevatedButton.icon(
                 onPressed: () {
@@ -141,6 +159,14 @@ class AboutScreen extends StatelessWidget {
                 },
                 icon: const Icon(Icons.info),
                 label: const Text('Más información'),
+              ),
+
+              const SizedBox(height: 12),
+
+              ElevatedButton.icon(
+                onPressed: () => _abrirFlutter(context),
+                icon: const Icon(Icons.open_in_browser),
+                label: const Text('Visitar Flutter'),
               ),
 
               const SizedBox(height: 30),
