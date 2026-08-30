@@ -1,82 +1,106 @@
 # Mi Deporte Favorito - Fútbol Sala
 
-Aplicación móvil desarrollada en Flutter como parte de la Actividad Integradora 2 de la materia Programación IV.
+## Actividad Integradora 2
 
-## Estudiante
+**Materia:** Programación IV  
+**Estudiante:** Carlos Alberto Zarasti Montecé  
+**Universidad:** ECOTEC
 
-Carlos Alberto Zarasti Montecé
+## Descripción de la aplicación
 
-## Universidad
+Mi Deporte Favorito es una aplicación móvil desarrollada en Flutter sobre la temática del fútbol sala.
 
-ECOTEC
+Este proyecto corresponde a la continuación y mejora de la aplicación desarrollada previamente en la Actividad Integradora 1.
 
-## Materia
+## Nuevas funcionalidades implementadas
 
-Programación IV
+Para la Actividad Integradora 2 se incorporaron nuevas pantallas, navegación mediante Navigator, selección de equipos, sistema básico de favoritos, mensajes mediante SnackBar, ventanas AlertDialog y apertura de enlaces externos.
 
-## Actividad
+## Pantallas desarrolladas
 
-Actividad Integradora 2
+La aplicación contiene cuatro pantallas principales:
 
-## Descripción
+1. **Inicio:** presenta la temática de la aplicación y permite acceder a las demás secciones.
+2. **Equipos:** muestra diferentes equipos mediante una cuadrícula y permite seleccionarlos.
+3. **Mis favoritos:** permite agregar o quitar Fútbol Sala como favorito.
+4. **Acerca de:** presenta información del estudiante, universidad, materia y actividad, además de permitir abrir un enlace externo.
 
-La aplicación presenta información relacionada con mi deporte favorito: el fútbol sala. El proyecto fue desarrollado utilizando Flutter y Dart.
+## Widgets utilizados
 
-Esta versión incorpora diferentes pantallas, navegación entre secciones y elementos interactivos.
+Durante el desarrollo se utilizaron diferentes widgets de Flutter, entre ellos:
 
-## Funcionalidades
+- Scaffold
+- AppBar
+- GridView
+- ListTile
+- Card
+- CircleAvatar
+- Divider
+- Icon
+- ElevatedButton
+- IconButton
+- FloatingActionButton
+- Padding
+- SizedBox
 
-- Pantalla principal de la aplicación.
-- Navegación entre diferentes pantallas.
-- Sección de equipos.
-- Selección de equipos mediante interacción con el usuario.
-- Mensajes utilizando SnackBar.
-- Pantalla de favoritos.
-- Interacción mediante botón de favorito.
-- Uso de AlertDialog.
-- Pantalla Acerca de.
-- Diseño mediante widgets de Flutter.
-- Uso de iconos y colores personalizados.
+## Interacciones implementadas
 
-## Tecnologías utilizadas
+La aplicación incorpora diferentes interacciones:
 
-- Flutter
-- Dart
-- Material Design
-- Google Fonts
+- Navegación entre pantallas mediante Navigator.
+- Selección de equipos.
+- Visualización de mensajes mediante SnackBar.
+- Apertura de ventanas mediante AlertDialog.
+- Agregar y quitar un elemento de favoritos.
+- Apertura de un sitio web externo.
 
-## Estructura principal
+## Uso de setState()
 
-El proyecto contiene diferentes pantallas organizadas dentro de la carpeta `lib/screens`, permitiendo mantener el código organizado y facilitar la navegación de la aplicación.
+En la pantalla Mis favoritos se implementó `setState()` para modificar dinámicamente el estado del elemento favorito.
+
+Al presionar el corazón, la variable que controla el estado cambia y la interfaz se actualiza mostrando si Fútbol Sala se encuentra agregado o eliminado de favoritos.
+
+## Paquete externo
+
+Se utilizó el paquete externo `url_launcher`.
+
+Este paquete permite abrir enlaces externos desde una aplicación Flutter. En la pantalla Acerca de se incorporó el botón **Visitar Flutter**, que abre el sitio oficial de Flutter en el navegador del dispositivo.
+
+## Personalización
+
+La aplicación fue personalizada de acuerdo con la temática seleccionada mediante:
+
+- Nombre: **Mi Deporte Favorito**.
+- Temática: **Fútbol Sala**.
+- Colores personalizados, principalmente verde.
+- Iconos relacionados con fútbol y deportes.
+- Elementos visuales representativos de la temática.
 
 ## Evidencias
 
-En la carpeta `capturas` se encuentran las evidencias del funcionamiento de la aplicación y de las diferentes interacciones realizadas durante su ejecución.
+Las capturas de pantalla del funcionamiento de la aplicación se encuentran almacenadas en la carpeta `capturas`.
 
-## Ejecución
-
-Para ejecutar el proyecto se utiliza:
-
-flutter pub get
-
-flutter run
-
-## Capturas de funcionamiento
-
-Se realizaron capturas de las principales funcionalidades de la aplicación:
+Las evidencias incluyen:
 
 - Pantalla principal.
-- Navegación hacia la sección de equipos.
+- Pantalla de equipos.
 - Selección de equipos.
 - Pantalla de favoritos.
 - Interacción con favoritos.
+- AlertDialog.
 - Pantalla Acerca de.
-- Ventanas de diálogo y mensajes de interacción.
+- Funcionamiento del paquete `url_launcher` abriendo Flutter en el navegador.
 
-## Navegación de la aplicación
+## Ejecución del proyecto
 
-La aplicación utiliza diferentes pantallas para organizar su contenido. Desde la pantalla principal el usuario puede acceder a la sección de equipos, favoritos y acerca de. También se implementaron elementos interactivos como botones, SnackBar y AlertDialog para mejorar la experiencia del usuario.
+Para ejecutar el proyecto se deben instalar las dependencias:
+
+flutter pub get
+
+Posteriormente se debe iniciar un emulador Android y ejecutar:
+
+flutter run
 
 ## Conclusión
 
-El desarrollo de esta aplicación permitió aplicar conceptos fundamentales de Flutter, como navegación entre pantallas, organización mediante widgets, manejo de interacciones y uso de componentes de Material Design. La aplicación fue probada mediante un emulador Android para verificar el funcionamiento de sus diferentes opciones.
+El desarrollo de esta actividad permitió ampliar la aplicación creada previamente e implementar navegación entre múltiples pantallas, nuevos widgets, manejo de estado mediante setState(), interacciones con el usuario y utilización de un paquete externo de Flutter.
