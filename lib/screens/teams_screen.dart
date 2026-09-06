@@ -1,41 +1,52 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../models/sport.dart';
+import '../providers/sport_provider.dart';
+import '../widgets/sport_card.dart';
 
 class TeamsScreen extends StatelessWidget {
   const TeamsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final equipos = [
-      {
-        'nombre': 'Barcelona SC',
-        'pais': 'Ecuador',
-        'icono': Icons.shield,
-      },
-      {
-        'nombre': 'Real Madrid',
-        'pais': 'España',
-        'icono': Icons.star,
-      },
-      {
-        'nombre': 'Manchester City',
-        'pais': 'Inglaterra',
-        'icono': Icons.sports_soccer,
-      },
-      {
-        'nombre': 'Bayern Múnich',
-        'pais': 'Alemania',
-        'icono': Icons.emoji_events,
-      },
-      {
-        'nombre': 'Inter Miami',
-        'pais': 'Estados Unidos',
-        'icono': Icons.sports,
-      },
-      {
-        'nombre': 'PSG',
-        'pais': 'Francia',
-        'icono': Icons.shield_outlined,
-      },
+    final List<Sport> equipos = [
+      Sport(
+        name: 'Barcelona SC',
+        description: 'Ecuador',
+        image: '',
+        category: 'Fútbol',
+      ),
+      Sport(
+        name: 'Real Madrid',
+        description: 'España',
+        image: '',
+        category: 'Fútbol',
+      ),
+      Sport(
+        name: 'Manchester City',
+        description: 'Inglaterra',
+        image: '',
+        category: 'Fútbol',
+      ),
+      Sport(
+        name: 'Bayern Múnich',
+        description: 'Alemania',
+        image: '',
+        category: 'Fútbol',
+      ),
+      Sport(
+        name: 'Inter Miami',
+        description: 'Estados Unidos',
+        image: '',
+        category: 'Fútbol',
+      ),
+      Sport(
+        name: 'PSG',
+        description: 'Francia',
+        image: '',
+        category: 'Fútbol',
+      ),
     ];
 
     return Scaffold(
@@ -55,83 +66,16 @@ class TeamsScreen extends StatelessWidget {
         itemBuilder: (context, index) {
           final equipo = equipos[index];
 
-          return Card(
-            elevation: 4,
-            child: InkWell(
-              borderRadius: BorderRadius.circular(12),
-              onTap: () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text(
-                      'Seleccionaste ${equipo['nombre']}',
-                    ),
-                    duration: const Duration(seconds: 2),
-                  ),
-                );
-              },
-              child: Padding(
-                padding: const EdgeInsets.all(10),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CircleAvatar(
-                      radius: 28,
-                      backgroundColor: Colors.green,
-                      child: Icon(
-                        equipo['icono'] as IconData,
-                        size: 30,
-                        color: Colors.white,
-                      ),
-                    ),
-
-                    const SizedBox(height: 10),
-
-                    Text(
-                      equipo['nombre'] as String,
-                      textAlign: TextAlign.center,
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-
-                    const SizedBox(height: 5),
-
-                    Text(
-                      equipo['pais'] as String,
-                      textAlign: TextAlign.center,
-                      maxLines: 2,
-                      style: const TextStyle(
-                        fontSize: 12,
-                        color: Colors.black54,
-                      ),
-                    ),
-
-                    const SizedBox(height: 8),
-
-                    const Icon(
-                      Icons.touch_app,
-                      size: 18,
-                      color: Colors.green,
-                    ),
-
-                    const SizedBox(height: 3),
-
-                    const Text(
-                      'Toca para seleccionar',
-                      textAlign: TextAlign.center,
-                      maxLines: 2,
-                      style: TextStyle(
-                        fontSize: 10,
-                        color: Colors.black54,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
+          return Consumer<SportProvider>(
+            builder: (context, provider, child) {
+              return SportCard(
+                sport: equipo,
+                isFavorite: provider.isFavorite(equipo),
+                onFavoritePressed: () {
+                  provider.toggleFavorite(equipo);
+                },
+              );
+            },
           );
         },
       ),

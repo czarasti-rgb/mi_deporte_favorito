@@ -10,4 +10,15 @@ class Sport {
     required this.image,
     required this.category,
   });
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        other is Sport &&
+            runtimeType == other.runtimeType &&
+            name == other.name;
+  }
+
+  @override
+  int get hashCode => name.hashCode;
 }
