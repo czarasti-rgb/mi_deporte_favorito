@@ -114,7 +114,7 @@ class AboutScreen extends StatelessWidget {
                         ),
                         title: Text('Actividad'),
                         subtitle: Text(
-                          'Actividad Integradora 2',
+                          'Actividad Integradora 3',
                         ),
                       ),
 

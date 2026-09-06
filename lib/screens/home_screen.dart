@@ -63,7 +63,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 10),
                       Text(
-                        'Actividad Integradora 2',
+                        'Actividad Integradora 3',
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
