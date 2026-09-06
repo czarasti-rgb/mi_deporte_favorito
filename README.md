@@ -1,106 +1,47 @@
-# Mi Deporte Favorito - Fútbol Sala
+# Mi Deporte Favorito
 
-## Actividad Integradora 2
+## Descripción
 
-**Materia:** Programación IV  
-**Estudiante:** Carlos Alberto Zarasti Montecé  
-**Universidad:** ECOTEC
+Mi Deporte Favorito es una aplicación móvil desarrollada con Flutter sobre la temática del fútbol sala. La aplicación permite navegar entre diferentes pantallas, visualizar equipos y administrar una lista de equipos favoritos mediante Provider.
 
-## Descripción de la aplicación
+Este proyecto corresponde a la Actividad Integradora 3 de Programación IV.
 
-Mi Deporte Favorito es una aplicación móvil desarrollada en Flutter sobre la temática del fútbol sala.
+## Objetivo
 
-Este proyecto corresponde a la continuación y mejora de la aplicación desarrollada previamente en la Actividad Integradora 1.
+Desarrollar una aplicación Flutter organizada en diferentes archivos y carpetas, aplicando navegación entre pantallas, widgets reutilizables, un modelo de datos y gestión de estado mediante Provider.
 
-## Nuevas funcionalidades implementadas
+## Funciones principales
 
-Para la Actividad Integradora 2 se incorporaron nuevas pantallas, navegación mediante Navigator, selección de equipos, sistema básico de favoritos, mensajes mediante SnackBar, ventanas AlertDialog y apertura de enlaces externos.
+- Pantalla principal de la aplicación.
+- Navegación entre cuatro pantallas.
+- Visualización de equipos mediante GridView.
+- Selección y eliminación de equipos favoritos.
+- Actualización automática de favoritos entre distintas pantallas.
+- Uso de Provider para administrar el estado.
+- Uso de widgets personalizados reutilizables.
+- Pantalla informativa Acerca de.
 
-## Pantallas desarrolladas
+## Tecnologías utilizadas
 
-La aplicación contiene cuatro pantallas principales:
+- Flutter
+- Dart
+- Provider
+- Material Design
 
-1. **Inicio:** presenta la temática de la aplicación y permite acceder a las demás secciones.
-2. **Equipos:** muestra diferentes equipos mediante una cuadrícula y permite seleccionarlos.
-3. **Mis favoritos:** permite agregar o quitar Fútbol Sala como favorito.
-4. **Acerca de:** presenta información del estudiante, universidad, materia y actividad, además de permitir abrir un enlace externo.
+## Estructura del proyecto
 
-## Widgets utilizados
-
-Durante el desarrollo se utilizaron diferentes widgets de Flutter, entre ellos:
-
-- Scaffold
-- AppBar
-- GridView
-- ListTile
-- Card
-- CircleAvatar
-- Divider
-- Icon
-- ElevatedButton
-- IconButton
-- FloatingActionButton
-- Padding
-- SizedBox
-
-## Interacciones implementadas
-
-La aplicación incorpora diferentes interacciones:
-
-- Navegación entre pantallas mediante Navigator.
-- Selección de equipos.
-- Visualización de mensajes mediante SnackBar.
-- Apertura de ventanas mediante AlertDialog.
-- Agregar y quitar un elemento de favoritos.
-- Apertura de un sitio web externo.
-
-## Uso de setState()
-
-En la pantalla Mis favoritos se implementó `setState()` para modificar dinámicamente el estado del elemento favorito.
-
-Al presionar el corazón, la variable que controla el estado cambia y la interfaz se actualiza mostrando si Fútbol Sala se encuentra agregado o eliminado de favoritos.
-
-## Paquete externo
-
-Se utilizó el paquete externo `url_launcher`.
-
-Este paquete permite abrir enlaces externos desde una aplicación Flutter. En la pantalla Acerca de se incorporó el botón **Visitar Flutter**, que abre el sitio oficial de Flutter en el navegador del dispositivo.
-
-## Personalización
-
-La aplicación fue personalizada de acuerdo con la temática seleccionada mediante:
-
-- Nombre: **Mi Deporte Favorito**.
-- Temática: **Fútbol Sala**.
-- Colores personalizados, principalmente verde.
-- Iconos relacionados con fútbol y deportes.
-- Elementos visuales representativos de la temática.
-
-## Evidencias
-
-Las capturas de pantalla del funcionamiento de la aplicación se encuentran almacenadas en la carpeta `capturas`.
-
-Las evidencias incluyen:
-
-- Pantalla principal.
-- Pantalla de equipos.
-- Selección de equipos.
-- Pantalla de favoritos.
-- Interacción con favoritos.
-- AlertDialog.
-- Pantalla Acerca de.
-- Funcionamiento del paquete `url_launcher` abriendo Flutter en el navegador.
-
-## Ejecución del proyecto
-
-Para ejecutar el proyecto se deben instalar las dependencias:
-
-flutter pub get
-
-Posteriormente se debe iniciar un emulador Android y ejecutar:
-
-flutter run
-
-## Conclusión
-
-El desarrollo de esta actividad permitió ampliar la aplicación creada previamente e implementar navegación entre múltiples pantallas, nuevos widgets, manejo de estado mediante setState(), interacciones con el usuario y utilización de un paquete externo de Flutter.
+```text
+lib/
+├── models/
+│   └── sport.dart
+├── providers/
+│   └── sport_provider.dart
+├── screens/
+│   ├── about_screen.dart
+│   ├── favorites_screen.dart
+│   ├── home_screen.dart
+│   └── teams_screen.dart
+├── widgets/
+│   ├── favorite_button.dart
+│   └── sport_card.dart
+└── main.dart
